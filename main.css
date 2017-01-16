@@ -1,5 +1,5 @@
 
-.btn:hover {
+.h2:hover {
  transform: rotate(360deg);
  transition: transform 4s ease-out;
 }
