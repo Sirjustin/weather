@@ -3,16 +3,30 @@ if (navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(function(position) {
 $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
 
+ var api ='http://api.openweathermap.org/data/2.5/weather?lat='+position.coords.latitude+'&lon='+position.coords.longitude +'&appid=8976cb1c546f89e8fbab98f7024fae8c';
+console.log(api);
+
+  $.getJSON(api, function(data){
+    var weatherType=data.weather[0].description;
+    var city =data.name;
+    
+    console.log(city);
+    });
+
+
+
 });
-}
 
  $("#getMessage").on("click", function(){
       
       $(".message").html("The Weather Is");
 });
 
- 
 
+
+
+
+}
 });
 
 
