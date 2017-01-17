@@ -7,9 +7,13 @@ $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + po
 console.log(api);
 
   $.getJSON(api, function(data){
-    var weatherType=data.weather[0].description;
-    var city =data.name;
-    
+    var weatherType = data.weather[0].description;
+    var city = data.name;
+    var temp = data.main.temp;
+
+    $("#city").html(city);
+    $("#weatherType").html(weatherType);
+    $("temp").html(temp);
     console.log(city);
     });
 
@@ -21,6 +25,8 @@ console.log(api);
       
       $(".message").html("The Weather Is");
 });
+
+
 
 
 
