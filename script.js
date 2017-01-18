@@ -18,23 +18,9 @@ var celsius = temp-273.15 + " C"
     $("#weatherType").html(weatherType);
     $("#temp").html(temp);
     $(".message").html(fahr);
-    console.log(city);
+ 
 
-
-
-function converion(temp){
-var conversion="";
-if(temp === fahr){
- $(".message").html(celsius);
-}
-else if (temp === celsius){
- $(".message").html(fahr);
-}
-
-return conversion;
-};
-
-     $("#getMessage").on("click", function(){
+     $("#getMessage").click(function(){
       
       $(".message").html(fahr);
 });
