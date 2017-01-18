@@ -10,21 +10,42 @@ console.log(api);
     var weatherType = data.weather[0].description;
     var city = data.name;
     var temp = data.main.temp;
+    var fahr= temp*9/5-459.67 + " F";
+var celsius = temp-273.15 + " C"
+
 
     $("#city").html(city);
     $("#weatherType").html(weatherType);
-    $("temp").html(temp);
+    $("#temp").html(temp);
+    $(".message").html(fahr);
     console.log(city);
+
+
+
+function converion(temp){
+var conversion="";
+if(temp === fahr){
+ $(".message").html(celsius);
+}
+else if (temp === celsius){
+ $(".message").html(fahr);
+}
+
+return conversion;
+};
+
+     $("#getMessage").on("click", function(){
+      
+      $(".message").html(fahr);
+});
     });
 
 
 
+
+
 });
 
- $("#getMessage").on("click", function(){
-      
-      $(".message").html("The Weather Is");
-});
 
 
 
