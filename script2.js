@@ -9,11 +9,9 @@ console.log(api);
   $.getJSON(api, function(data){
     var weatherType = data.weather[0].description;
     var city = data.name;
-    var kelvin = data.main.temp;
-    var fahr= kelvin*9/5-459.67 + " F";
-    var celsius = kelvin-273.15 + " C"
-    var temperature=true;
-
+    var temp = data.main.temp;
+    var fahr= temp*9/5-459.67 + " F";
+var celsius = temp-273.15 + " C"
 
 
     $("#city").html(city);
@@ -23,30 +21,11 @@ console.log(api);
     console.log(city);
 
 
-  if (kelvin<280){
-$('body').css('background-image', 'url(images/wl.jpg)');
-}
-else{$('body').css('background-image', 'url(images/sl.jpg)');}
 
-
-
-
-
-
-
-     $("#getMessage").click(function(){
-if(temperature===true){
-   $(".message").html(celsius);
-   temperature=false;
-}
-else{ $(".message").html(fahr);
-temperature=true;
-
-}
-
-  
+     $("#getMessage").on("click", function(){
+      
+      $(".message").html(fahr);
 });
-
 
 
     });

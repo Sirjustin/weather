@@ -3,3 +3,8 @@
  transform: rotate(360deg);
  transition: transform 4s ease-out;
 }
+
+.info{
+	
+    background-color: yellow;
+}
