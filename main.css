@@ -6,10 +6,12 @@ h2{
  transition: transform 4s ease-out;
 }
 
-background-image{
-	  opacity: 0.1;
+body{
+  background-repeat: no-repeat;
+	
+	      background-attachment: fixed;
+    background-position: left;
 }
-
 .info{
 	
     background-color: white;
