@@ -18,16 +18,19 @@ console.log(api);
 
     $("#city").html(city);
     $("#weatherType").html(weatherType);
-    $("#temp").html(temp);
+    $("#temp").html(fahr);
     $(".message").html(temp);
-    console.log(city);
 
 
   if (kelvin<280){
-$('body').css('background-image', 'url(images/wl.jpg)');
+$('body').css('background-image', 'url(images/winter.jpg)');
 }
-else{$('body').css('background-image', 'url(images/sl.jpg)');}
+else{$('body').css('background-image', 'url(images/summer.jpg)');}
 
+  if (kelvin<280){
+$('#weatherdog').prepend('<img id="winterleo" src="images/wl.jpg" width="200" height="200"/>');
+}
+else{$('#weatherdog').prepend('<img id="winterleo" width="200" height="200"/>');}
 
 
 
@@ -36,10 +39,10 @@ else{$('body').css('background-image', 'url(images/sl.jpg)');}
 
      $("#getMessage").click(function(){
 if(temperature===true){
-   $(".message").html(celsius);
+   $("#temp").html(celsius);
    temperature=false;
 }
-else{ $(".message").html(fahr);
+else{ $("#temp").html(fahr);
 temperature=true;
 
 }
