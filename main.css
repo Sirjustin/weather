@@ -1,13 +1,22 @@
 
 h2{
 	font-family: 'Pangolin', cursive;
-	 background-color: white;
+	 background-color:;
 position:relative;
-left:450px;
-    width:10em;
+left:370px;
+    width:15em;
     display:inline;
-
+  text-align: center;
 }
+
+#city{
+	font-size:30px;
+	font-weight: bold
+}
+#temp{
+font-size:20px;
+}
+
 
 
 body{
@@ -15,16 +24,20 @@ background:no-repeat;
 
 }
 .btn-primary{
+  width:100px;
 }
 
 .info{
+    text-align: center;
+    margin-top: 20px;
 	  display: block;
-    background-color: white;
+    background-color:;
     width:200px;
     height:200px;
-    border: 5px solid green;
+    border: 5px ;
 position:relative;
 left:450px;
+
 }
 
 .weatherdog{
